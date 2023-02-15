@@ -11,25 +11,25 @@ def getvals():
 
 
 root.mainloop()
-root.geometry(“500x300”)
+root.geometry("500x300")
 
 #heading
-Label(root, text=“ Python Registration Form ”, font=“ar 15 bold”).grid(row=0, column=3)
+Label(root, text="Python Registration Form", font="ar 15 bold").grid(row=0, column=3)
 
 # field name
-name = Label(root, text=“Name”)
+name = Label(root, text="Name")
 
-phone = Label(root, text=“Phone”)
+phone = Label(root, text="Phone")
 
-email = Label(root, text=“E-mail”)
+email = Label(root, text="E-mail")
 
-birthday = Label(root, text=“Birthday”)
+birthday = Label(root, text="Birthday")
 
-gender = Label(root, text=“Gender”)
+gender = Label(root, text="Gender")
 
-instagram = Label(root, text=“Instagram”)
+instagram = Label(root, text="Instagram")
 
-linkedin = Label(root, text=“LinkedIn”)
+linkedin = Label(root, text="LinkedIn")
 
 # packing fields 
 name.grid(row=1, column=2)
@@ -67,24 +67,24 @@ checkvalue =IntVar
 nameentry = Entry(root, textvariable =namevalue)
 phoneentry = Entry(root, textvariable =phonevalue)
 emailentry = Entry(root, textvariable =emailvalue)
-birthdayentry = Entry(root, textvariable =birthdayvalue
-genderentry = Entry(root, textvariable =gendervalue
+birthdayentry = Entry(root, textvariable =birthdayvalue)
+genderentry = Entry(root, textvariable =gendervalue)
 
 # packing entry fields
 nameentry.grid(row=1, column=3)
 phoneentry.grid(row=2, column=3)
-Emailentry.grid(row=3, column=3)
+emailentry.grid(row=3, column=3)
 birthdayentry.grid(row=4, column=3)
-gender entry.grid(row=5, column=3)
-Instagramentey.grid(row=6, column=3)
-linkedinentry.grid(row=6, column=3)
+genderentry.grid(row=5, column=3)
+instagramentry.grid(row=6, column=3)
+linkedinentry.grid(row=7, column=3)
 
 # creating checkbox
-checkbtn = checkbutton(text=“Remember me?”,  variable = checkvalue)
+checkbtn = checkbutton(text="Remember me?",  variable = checkvalue)
 checkbtn.grid(row=6, column= 3)
 
 # submit button
-button(text=“Submit”, command=getvals).grid(row=7, column=3)
+button(text="Submit", command=getvals).grid(row=7, column=3)
 
 
 
