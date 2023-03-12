@@ -1,18 +1,21 @@
 from tkinter import *
-
 root = Tk()
 root.geometry("500x300")
 root.title("Python Registration Form")
 
 def getvals():
-    print("Name:", namevalue.get())
-    print("Phone:", phonevalue.get())
-    print("Email:", emailvalue.get())
-    print("Birthday:", birthdayvalue.get())
-    print("Gender:", gendervalue.get())
-    print("Instagram:", instagramvalue.get())
-    print("LinkedIn:", linkedinvalue.get())
-    print("Remember me?:", checkvalue.get())
+    print("Submission Accepted")
+    print(f"Name: {namevalue.get()}")
+    print(f"Phone: {phonevalue.get()}")
+    print(f"Email: {emailvalue.get()}")
+    print(f"Birthday: {birthdayvalue.get()}")
+    print(f"Gender: {gendervalue.get()}")
+    print(f"Instagram: {instagramvalue.get()}")
+    print(f"LinkedIn: {linkedinvalue.get()}")
+    if checkvalue.get() == 1:
+        print("Remember me checked")
+    else:
+        print("Remember me not checked")
 
 # heading
 Label(root, text="Python Registration Form", font="ar 15 bold").grid(row=0, column=3)
@@ -26,7 +29,7 @@ gender = Label(root, text="Gender")
 instagram = Label(root, text="Instagram")
 linkedin = Label(root, text="LinkedIn")
 
-# packing fields
+# packing fields 
 name.grid(row=1, column=2)
 phone.grid(row=2, column=2)
 email.grid(row=3, column=2)
@@ -45,7 +48,7 @@ instagramvalue = StringVar()
 linkedinvalue = StringVar()
 checkvalue = IntVar()
 
-# creating entry field
+# creating entry field 
 nameentry = Entry(root, textvariable=namevalue)
 phoneentry = Entry(root, textvariable=phonevalue)
 emailentry = Entry(root, textvariable=emailvalue)
@@ -71,7 +74,3 @@ checkbtn.grid(row=8, column=3)
 Button(root, text="Submit", command=getvals).grid(row=9, column=3)
 
 root.mainloop()
-
-
-
-
